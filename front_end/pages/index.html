@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="module">
+    </script>
+    <title>Word Tile Game</title>
+</head>
+<body>
+    
+    <section id="menu">
+        <div class="menu-title">
+            <div>W</div>
+            <div>O</div>
+            <div>R</div>
+            <div>D</div>
+            <div>T</div>
+            <div>I</div>
+            <div>L</div>
+            <div>E</div>
+        </div>
+        <div id="menu-buttons">
+            <button id="single-player" type="submit">Single Player</button>
+            <button id="vs-ai" type="submit">Play against AI</button>
+            <button id="multi-player" type="submit">Multiplayer</button>
+            <button id="online-player" type="submit">Online</button>
+            <button id="options-button" type="submit">Boards</button>
+        </div>
+    </section>
+    
+    <div class="game-layout">
+        <main>
+            <button class="home-button">&#8962;</button>
+            <section class="board"></section>
+            <section class="user-interaction">
+                <button data-button="submit" class="game-button">submit</button>
+                <button data-button="pass" class="game-button">pass</button>
+                <button data-button="clear" class="game-button">clear</button>
+                <button data-button="finish" class="game-button">finish</button>
+            </section>
+
+        </main>
+        <div class="point-area">
+            <div class="tile-keys">
+                <div><div class="tile bonusWordThree">3WS</div><p>Triple Word Score</p></div>
+                <div><div class="tile bonusLetterThree">3LS</div><p>Triple Letter Score</p></div>
+                <div><div class="tile bonusWordTwo">2WS</div><p>Double Word Score</p></div>
+                <div><div class="tile bonusLetterTwo">2LS</div><p>Double Letter Score</p></div>
+                <div><div class="tile star">&#x2605;</div><p>Double Word Score</p></div>
+            </div>
+            <section id="info-board"></section>
+        </div>
+    </div>
+
+    <div id="options">
+        <div>
+            <button id="previous-button" class="arrow-button">&#8249;</button>
+            <button id="next-button" class="arrow-button">&#8250;</button>
+        </div>
+        <button class="home-button">&#8962;</button>
+    </div>
+    
+</body>
+</html>

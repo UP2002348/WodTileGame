@@ -1,0 +1,352 @@
+:root{
+    --buttonColour: #0077b6;
+    --greenish: #006e52;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(63, 63, 63);
+}
+
+/* menu */
+#menu{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ff2700;
+}
+
+.menu-title{
+    display: flex;
+}
+
+.menu-title div{
+    background-color: var(--buttonColour);
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.menu-title div:nth-child(even){
+    margin-top: 1em;
+    background: rgb(127, 255, 0);
+    color:rgb(253, 0, 51);
+}
+
+#menu-buttons{
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+#menu-buttons button{
+    margin: 0.5em;
+    width: 8em;
+    height: 3em;
+    border: none;
+    border-radius: 0.3em;
+    background-color: var(--buttonColour);
+    color:#fff;
+    font-size: 1.3em;
+}
+/* menu end */
+
+/* Options menu */
+#options{
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#options>div{
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+#options .tile{
+    height:4em;
+    width: 4em;;
+    font-size: 0.5em;
+}
+
+#options .arrow-button{
+    top: 37%;
+    border: none;
+    background: transparent;
+    font-size: 6em;
+    color: #fff;
+    opacity: 0.6;
+}
+
+#options .arrow-button:hover{
+    opacity: 1;
+}
+
+#options #previous-button{
+    position: absolute;
+    z-index: 1;
+}
+
+#options #next-button{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+
+/* options end */
+
+/* main game */
+.game-layout{
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+main{
+    display: grid;
+}
+
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+
+.tile{
+    height: 2.5em;
+    width: 2.5em;
+    background-color: var(--greenish);
+    border: #000 solid 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.tile-letter{
+    background-color: #e6cb97;
+    color: var(--greenish);
+    border: none;
+    margin: 0.1em;
+}
+
+.tile-placed{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+.star{
+    background-color: plum;
+}
+
+.bonusWordThree{
+    background-color: crimson;
+}
+
+.bonusLetterThree{
+    background-color: darkblue;
+}
+
+.bonusWordTwo{
+    background-color: plum;
+}
+
+.bonusLetterTwo{
+    background-color: darkcyan;
+}
+
+.tile-hover{
+    background: rgba(255, 3, 53, 0.466);
+}
+
+
+.user-interaction{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.rack{
+    height: 4em;
+    width: 24em;
+    background-color: var(--greenish);
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.tile-keys{
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin-bottom: 1em;
+}
+
+.tile-keys>div{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.point-area{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+    margin-bottom: 5em;
+}
+
+#info-board{
+    height: 20em;
+    width: 18em;
+    background-color: #fff;
+    border: #000 0.3em solid;
+    color: #000;
+    overflow: auto;
+}
+
+#info-board .valid-word{
+    background-color: rgb(2, 255, 2);
+    margin-bottom: 0.3em;
+    padding: 0.2em;
+}
+
+#info-board .invalid-word{
+    background-color: rgb(255, 0, 0);
+    margin-bottom: 0.3em;
+    padding: 0.2em;
+}
+
+
+
+.point{
+    position: absolute;
+    bottom: 0;
+    right: 0em;
+    font-size: 0.8em;
+}
+
+.game-button{
+    margin-top: 1em;
+    height: 3em;
+    width: 5em;
+    border-radius: 0.5em;
+    background-color: var(--buttonColour);
+    color:#fff;
+    border: none;
+}
+
+.score-board{
+    background: #fff;
+    margin: 0.3em;
+    padding: 0.1em;
+    text-align: center;
+}
+
+.user-turn{
+    background: chocolate;
+    padding: 0.3em;
+    font-weight: bold;
+    color: #fff;
+}
+/* end */
+
+/* popup */
+.popup{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.popup-contents{
+    width: 25em;
+    height: 13em;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.596);
+    color: #4b4b4b;
+    font-size: 1.3em;
+    padding: 1em;
+}
+
+.popup-contents .number-input{
+    -moz-appearance: textfield;
+    margin-top: 0.5em;
+    border-radius: 0.2em;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 1em;
+    text-align: center;
+}
+
+.popup-contents .number-input::-webkit-outer-spin-button,
+.popup-contents .number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* popup end */
+
+.home-button{
+    margin-top: 1em;
+    width: 2em;
+    height: 1.5em;
+    border-radius: 0.5em;
+    background-color: var(--buttonColour);
+    color:#fff;
+    border: none;
+    font-size: 2em;
+}
+
+#menu-buttons button:hover, .home-button:hover, .game-button:hover{
+    filter: brightness(2);
+}

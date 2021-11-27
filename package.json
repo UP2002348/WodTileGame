@@ -1,0 +1,19 @@
+{
+  "name": "tile_cw",
+  "version": "1.0.0",
+  "description": "Tile based Game similar to Scrabble. Year 1 Application Programming Course Work",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node back_end/srv.js"
+  },
+  "author": "up2002348",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+  
+}

@@ -1,13 +1,13 @@
-Scrabble Course Work
+# Scrabble Course Work
 
-CONTENTS:
+## CONTENTS:
 - Multiple scrabble boards with special tiles 
 - A rack with draggable word tiles
 - Single Player
 - Multiplayer(offline)
 - Board Designs
 
-Features:
+## Features:
 - Single Player:
 In single player you are playing against your best score. Each time you make a word, the points is added to the score board with the word/s being added to the information board. You have two options to do when its your go. You can either submit a word that you placed or if you can't think of any word then you can finish the game by clicking finish. The clear button removes the tiles you placed on the board.
 
@@ -23,7 +23,7 @@ A check is made each time the player submits a word. This function checks if the
 - Calculates the Score:
 If a word is valid then the score is calculated with the score on the tiles and the bonus points from the special tiles
 
-Future Work:
+## Future Improvements:
 - ONLINE MULTIPLAYER: This feature will be added soon
 Users can join private or public rooms/lobbies where they could play against each other over the internet
 - DATABASE: This feature will be released on 20/06/2021
